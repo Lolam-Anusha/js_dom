@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>This is heading</h1>
+    <h1>This is heading</h1>
+    <h1>This is heading</h1>
+    <h1>This is heading</h1>
+
+    <h1 class="heading">Heading1</h1>
+    <h1 id="heading1">Heading2</h1>
+
+    <script>
+        // document.write("This is about Dom")
+        console.log(document)       //#document
+
+        console.log(new Document())    //#document (about:blank)
+
+        console.log(document.getElementsByTagName("h1"))  //HTMLCollection(6)
+
+        var firstHeading = document.getElementsByTagName("h1")
+        console.log(firstHeading[0].innerText)         //This is heading
+
+        document.write(firstHeading[0].innerHTML)
+
+        document.getElementsByTagName("h1")[0].innerText = "asd"
+
+        document.getElementsByClassName(".h1").innerText
+
+        // document.getElementById("h1").innerText
+
+        const heading1 = document.createElement("h1")
+        heading1.innerText = "This is creating our own heading1"
+        console.log(heading1)      //<h1>This is creating our own heading1</h1>
+
+        console.log(document.title)      //DOM
+
+        console.log(document.documentElement)    //entire this html document is printed
+    </script>
+</body>
+</html>
